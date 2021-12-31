@@ -1,13 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.navbar-brand{
+  font-family: 'Pacifico', cursive;
+  font-weight: bolder;
+  font-size: 2em;
 }
+
+.nav-link{
+  font-family: 'Pacifico', cursive;
+}
+
+#navbar_bg{
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#nav-scroll{
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.nav-link-parent{
+  position: relative;
+}
+.nav-link-child{
+  position: absolute;
+  top: -20px;
+  left: 35%;
+}
+
+#home-area{
+  height: 580px;
+  background: linear-gradient(to right,#0ABFBC,#FC354C);
+  position: relative;
+}
+
+.main-area-img{
+  border-radius: 50%;
+}
+
+.main-area-poster{
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: inline-block;
+  padding: 10px;
+}
+
+.main-area-poster-centent{
+  font-weight: bold;
+  font-family: 'Cookie', cursive;
+}
+
+#poster-1{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+#poster-2{
+  position: absolute;
+  top: 10%;
+  right: 23%;
+}
+
+#poster-3{
+  position: absolute;
+  bottom: 15%;
+  right: 25%;
+}
+
+
+#skills{
+  height: 600px;
+  background: linear-gradient(to right,#FC354C,#0ABFBC);
+  position: relative;
+}
+
+.skills-header{
+  font-family: 'Pacifico', cursive;
+}
+
+#skills-img{
+  width: 400px;
+  animation: updown 2s infinite alternate-reverse;
+}
+
+@keyframes updown {
+  0%{transform: translateY(10px);}
+  100%{transform: translateY(-10px);}
+}
+
+.service-area-poster{
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  display: inline-block;
+  padding: 10px;
+}
+
+.service-area-poster-content{
+  font-family: monospace;
+  font-weight: bolder;
+}
+.service-skills-list{
+  font-family: 'Pacifico', cursive;
+}
+
+
+#project{
+  height: 600px;
+  background: linear-gradient(to right,#0ABFBC,#FC354C);
+  position: relative;
+}
+
+.project-header{
+  font-family: 'Pacifico', cursive;
+}
+
+#about{
+  height: 500px;
+  background: linear-gradient(to right,#FC354C,#0ABFBC);
+  position: relative;
+}
+
+.about-header{
+  font-family: 'Pacifico', cursive;
+}
+
+.about-content{
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: bold;
+  width: 500px;
+  font-size: 1.2em;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 39% 61% 31% 69% / 63% 32% 68% 37% ;
+  background-color: black;
+  color: white;
+}
+
+.about-content-highlight{
+  font-weight: bolder;
+  color: #FC354C;
+}
+
+#whatsapp{
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+}
+
+@media (max-width: 1200px) { 
+  #about{
+    height: 750px;
+  }
+  #poster-1{
+    left: 4%;
+  }
+ }
+
+ @media (max-width: 992px) { 
+   #project{
+     height: 750px;
+   }
+   #poster-1{
+    left: 3%;
+  }
+  #poster-2{
+    right: 10%;
+  }
+  #skills-img{
+    width: 300px;
+  }
+  }
+
+  @media (max-width: 768px) { 
+    #project{
+      height: 650px;
+    }
+   }
+
+
+   @media (max-width: 576px) { 
+    .main-area-img{
+      width: 300px;
+    }
+    #poster-2{
+      top: 0%;
+      right: 0%;
+    }
+    #poster-3{
+      bottom: 35%;
+      right: 5%;
+    }
+    #home-area{
+      height: 400px;
+    }
+    .about-content{
+      font-size: 1em;
+      border-radius: 50%;
+      width: 100%;
+    }
+   }
+
+
+
